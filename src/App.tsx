@@ -1,11 +1,12 @@
+import "@mantine/core/styles.css";
+import { MantineProvider } from "@mantine/core"
+import HomePage from "./components/HomePage"
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline text-red-">
-      Boiler Plate code for Portfolio
-    </h1>
-    </div>
+    <MantineProvider>
+      <HomePage />
+    </MantineProvider>
   )
 }
 
