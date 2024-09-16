@@ -130,7 +130,7 @@ const SkillInfo = [
       "NodeJS",
       "ExpressJS",
       "Socket.IO",
-      "Vue.js",
+      "VueJS",
       "Django",
       "Flask",
       "TensorFlow",
