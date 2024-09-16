@@ -158,7 +158,7 @@ const SkillInfo = [
   },
   {
     title: "Area of Interest",
-    skills: ["MongoDB", "FireBase", "MySQL", "SQLite"],
+    skills: ["Full Stack Web Development", "AI/ML Engineer", "Front-End Development", "Data Scientist"],
   },
 ];
 const socialLinks = [
