@@ -21,11 +21,11 @@ import python from "./assets/python.png"
 const Info = {
   name: "Sagnik Dey",
   stack: [
-    "Aspiring Software Developer",
-    "MERN Stack Developer",
-    "Open Source Contributor",
-    "Competitive Programmer",
-    "Freelancer",
+    "a MERN Stack Developer",
+    "an Aspiring SDE",
+    "an Open-Source Contributor",
+    "a Competitive Programmer",
+    "a Freelancer",
   ],
   bio: "I'm a passionate software engineer specialized in crafting efficient and scalable solutions, deliver top-notch web applications, and provide freelance services that exceed client expectations. Let's connect and create something amazing together!",
 };
@@ -34,7 +34,7 @@ const ProjectInfo = [
   {
     title: "MsgSync",
     desc: "Ekart is a modern, fully responsive e-commerce platform built using React, TailwindCSS, Heroicons, and HeadlessUI, offering a seamless shopping experience across all devices. It features secure user authentication with login, registration, and logout functionalities. Users can add items to a wishlist or remove them, search for specific products, and add them to a shopping cart for purchase. The checkout process includes form validation for address and payment information, ensuring accuracy and security. After purchase, users can view their order history in the Orders section. Ekart combines robust functionality with a sleek, intuitive design, making online shopping effortless and enjoyable.",
-    image: "Ekart.png",
+    image: ".png",
     live: true,
     technologies: ["React", "Tailwind", "Redux", "Heroicons", "HeadlessUI"],
     link: "https://code-mars.github.io/Ekart/",
@@ -124,7 +124,7 @@ const SkillInfo = [
     ],
   },
   {
-    title: "Technologies/Frameworks",
+    title: "Frameworks",
     skills: [
       "ReactJS",
       "NodeJS",
@@ -143,6 +143,10 @@ const SkillInfo = [
   },
   {
     title: "Deployment",
+    skills: ["Netlify", "Vercel", "Heroku", "AWS", "GCP"],
+  },
+  {
+    title: "Tools Used",
     skills: [
       "Git",
       "Github",
@@ -151,6 +155,10 @@ const SkillInfo = [
       "MongoDB Compass",
       "Spring Tool Suite",
     ],
+  },
+  {
+    title: "Area of Interest",
+    skills: ["MongoDB", "FireBase", "MySQL", "SQLite"],
   },
 ];
 const socialLinks = [

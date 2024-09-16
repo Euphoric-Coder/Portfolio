@@ -23,13 +23,13 @@ const About = () => {
       >
         <div className="bs:ml-10 bs:w-3/5 flex flex-col lg-mx:gap-3 bs-mx:items-center">
           <div className="text-primaryColor text-3xl lg-mx:text-2xl xs-mx:text-xl xsm-mx:text-lg">
-            Hi, I am
+            Hi, My name is 
           </div>
           <div className="text-white text-[4.25rem] font-extrabold lg-mx:text-5xl sm-mx:text-4xl xs-mx:text-3xl xsm-mx:text-[27px]">
             {Info.name}
           </div>
-          <div className="text-white text-4xl flex font-semibold lg-mx:text-[27px] sm-mx:text-2xl xs-mx:text-xl xsm-mx:text-lg">
-            I'm a&nbsp;
+          <div className="text-white text-3xl flex font-semibold lg-mx:text-[27px] sm-mx:text-2xl xs-mx:text-xl xsm-mx:text-lg">
+            I'm&nbsp;
             <span className="text-primaryColor">
               <Typewriter
                 options={{
