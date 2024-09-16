@@ -6,6 +6,11 @@
     --primary-color:"#8A2BE2";
     scroll-behavior: smooth;
  }
+
+ *::selection{
+  background-color: #5a387b;
+ }
+
  ::-webkit-scrollbar-track
  {
    border-radius: 10px;

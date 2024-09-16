@@ -55,7 +55,7 @@ const About = () => {
               target="_blank"
               rel="noneopener noreferrer"
               radius={"xl"}
-              rightSection={<IconExternalLink size={20} />}
+              rightSection={<IconExternalLink size={30} />}
             >
               View Resume
             </Button>
@@ -68,7 +68,7 @@ const About = () => {
               variant="outline"
               color="#8A2BE2"
               radius={"xl"}
-              rightSection={<IconDownload size={20} />}
+              rightSection={<IconDownload size={30} />}
             >
               Download Resume
             </Button>
@@ -77,7 +77,7 @@ const About = () => {
         <div className="h-fit flex justify-center items-center rounded-full bs:mr-10 w-fit">
           <ProfilePicture
             src={profile}
-            size={325} // Adjust size as needed
+            size={375}
             className="lg-mx:w-64 lg-mx:h-64 xsm-mx:w-56 xsm-mx:h-56"
           />
         </div>

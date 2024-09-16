@@ -4,48 +4,78 @@ import { useMediaQuery } from "@mantine/hooks";
 import { em } from "@mantine/core";
 import { useEffect, useState } from "react";
 
-const links = ["About", "Projects", "Skills", "Experience", "Education"];
-const navLinks = (col: Boolean, clicked: any) => {
-  const handleClick = () => {
-    if (clicked) clicked();
-  };
-  return links.map((link, index) => {
-    return (
-      <a
-        key={index}
-        onClick={handleClick}
-        className={`${
-          col ? "flex flex-col items-center" : ""
-        } text-textColor text-xl font-bold poppins-medium transition-all duration-500 ease-in-out hover:text-primaryColor`}
-        href={`#${link}`}
-      >
-        {link}
-      </a>
-    );
-  });
+const links: string[] = [
+  "About",
+  "Projects",
+  "Skills",
+  "Experience",
+  "Education",
+];
+
+// Function to handle smooth scrolling with offset
+const handleScrollToSection = (id: string): void => {
+  const element = document.getElementById(id);
+  if (element) {
+    const offset = 120;
+    const elementPosition =
+      element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
 };
 
-const Header = () => {
-  const isMobile = useMediaQuery(`(max-width: ${em(476)})`);
-  const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [shadow, setShadow] = useState(false);
-  const controlNavbar = () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 70) setShow(false);
-    else setShow(true);
-    if (window.scrollY > 70) setShadow(true);
-    else setShadow(false);
-    setLastScrollY(window.scrollY);
+const navLinks = (col: boolean, clicked: (() => void) | null) => {
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ): void => {
+    event.preventDefault(); // Prevent default anchor behavior
+    if (clicked) clicked();
+    handleScrollToSection(id); // Adjust scroll position
   };
+
+  return links.map((link, index) => (
+    <a
+      key={index}
+      onClick={(e) => handleClick(e, link)}
+      className={`${
+        col ? "flex flex-col items-center" : ""
+      } text-textColor text-xl font-bold poppins-medium transition-all duration-500 ease-in-out hover:text-primaryColor`}
+      href={`#${link}`}
+    >
+      {link}
+    </a>
+  ));
+};
+
+const Header: React.FC = () => {
+  const isMobile = useMediaQuery(`(max-width: ${em(476)})`);
+  const [shadow, setShadow] = useState<boolean>(false);
+
+  const controlNavbar = (): void => {
+    if (window.scrollY > 70) {
+      setShadow(true); // Apply glass effect when scrolling
+    } else {
+      setShadow(false); // Remove glass effect when at the top
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", controlNavbar);
     return () => window.removeEventListener("scroll", controlNavbar);
-  });
+  }, []);
+
   return (
     <nav
-      className={`flex ${show ? "translate-y-0" : "-translate-y-28"} ${
-        shadow ? "shadow-[0px_10px_30px_-10px_#020c1b]" : ""
-      } transition-transform duration-500 ease-in-out fixed w-full z-10 bg-bgColor h-28  px-10  justify-between items-center xs-mx:px-4 xs-mx:h-20 `}
+      className={`flex translate-y-0 ${
+        shadow
+          ? "bg-white bg-opacity-30 backdrop-blur-md border-b border-solid border-white border-opacity-10 shadow-[0px_10px_30px_-10px_#020c1b]"
+          : "bg-bgColor"
+      } transition-transform duration-500 ease-in-out fixed w-full z-10 h-28 px-10 justify-between items-center xs-mx:px-4 xs-mx:h-20`}
     >
       <IconHexagonLetterSFilled
         className="z-10"
@@ -58,5 +88,12 @@ const Header = () => {
     </nav>
   );
 };
+
 export default Header;
 export { navLinks };
+
+// <nav
+//   className={`flex ${show ? "translate-y-0" : "-translate-y-28"} ${
+//     shadow ? "shadow-[0px_10px_30px_-10px_#020c1b]" : ""
+//   } transition-transform duration-500 ease-in-out fixed w-full z-10 bg-bgColor h-28  px-10  justify-between items-center xs-mx:px-4 xs-mx:h-20 `}
+// >
