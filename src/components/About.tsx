@@ -21,9 +21,9 @@ const About = () => {
         className="mt-28 flex relative overflow-hidden justify-around items-center font-mono px-10 py-10 sm-mx:px-4 xs-mx:px-2 xs-mx:py-4 h-fit lg-mx:justify-between bs-mx:flex-wrap bs-mx:flex-col-reverse bs-mx:!overflow-visible bs-mx:gap-6 md-mx:px-6"
         id="About"
       >
-        <div className="bs:ml-10 bs:w-3/5 flex flex-col lg-mx:gap-3 bs-mx:items-center">
+        <div className="bs:ml-10 bs:w-3/5 flex flex-col lg-mx:gap-3 bs-mx:items-center ">
           <div className="text-primaryColor text-3xl lg-mx:text-2xl xs-mx:text-xl xsm-mx:text-lg">
-            Hi, My name is 
+            Hi, My name is
           </div>
           <div className="text-white text-[4.25rem] font-extrabold lg-mx:text-5xl sm-mx:text-4xl xs-mx:text-3xl xsm-mx:text-[27px]">
             {Info.name}
@@ -40,8 +40,23 @@ const About = () => {
               />
             </span>
           </div>
-          <div className="text-textColor text-xl w-[90%] text-justify my-8 lg-mx:my-0 font-semibold lg-mx:text-base sm-mx:text-sm xs-mx:text-xs">
-            {Info.bio}
+          <div className="text-textColor text-2xl w-[90%] text-justify my-8 lg-mx:my-0 font-semibold lg-mx:text-base sm-mx:text-sm xs-mx:text-xs nunito-sans-about span-white">
+            I’m a passionate software engineer specializing in crafting{" "}
+            <span className="">efficient</span> and{" "}
+            <span>scalable solutions</span>, with a strong focus on the{" "}
+            <span className="text-white">MERN Stack</span> and occasional
+            experience in <span>iOS development.</span> I excel at delivering
+            top-notch web applications and innovative iOS apps, all while driven
+            by a commitment to exceeding client expectations.
+            <br />
+            My journey into technology began in high school, igniting a deep
+            enthusiasm for web development and iOS app creation. I am excited to
+            delve further into AI/ML, competitive programming, and enhancing my
+            understanding of data structures and algorithms.
+            <br />
+            Always eager to tackle complex problems and undertake creative
+            projects, I am <span className="text-white">open</span>open to new
+            challenges and opportunities to collaborate.
           </div>
           <div className="xs-mx:w-[90%] flex gap-10 xs-mx:justify-between">
             <Button

@@ -44,7 +44,7 @@ const navLinks = (col: boolean, clicked: (() => void) | null) => {
       onClick={(e) => handleClick(e, link)}
       className={`${
         col ? "flex flex-col items-center" : ""
-      } text-textColor text-xl font-bold poppins-medium transition-all duration-500 ease-in-out hover:text-primaryColor`}
+      } text-textColor font-bold text-[1.43em] poppins-semibold transition-all duration-500 ease-in-out hover:text-primaryColor`}
       href={`#${link}`}
     >
       {link}

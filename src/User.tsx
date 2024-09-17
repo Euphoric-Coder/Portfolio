@@ -5,18 +5,9 @@ import {
 } from "@tabler/icons-react";
 import { SiKaggle } from "react-icons/si";
 import { FaUpwork } from "react-icons/fa6";
-import iitm from "./assets/iit.png"
-import iitg from "./assets/iitg.png"
-import bits from "./assets/bits.jpeg"
-import java from "./assets/java.png"
-import c from "./assets/c.png"
-import cpp from "./assets/cpp.png"
-import javascript from "./assets/javascript.png"
-import typescript from "./assets/typescript.png"
-import go from "./assets/go.png"
-import html from "./assets/html.png"
-import css from "./assets/css.png"
-import python from "./assets/python.png"
+import iitm from "./assets/iit.png";
+import iitg from "./assets/iitg.png";
+import bits from "./assets/bits.jpeg";
 
 const Info = {
   name: "Sagnik Dey",
@@ -27,7 +18,7 @@ const Info = {
     "a Competitive Programmer",
     "a Freelancer",
   ],
-  bio: "I'm a passionate software engineer specialized in crafting efficient and scalable solutions, deliver top-notch web applications, and provide freelance services that exceed client expectations. Let's connect and create something amazing together!",
+  bio: "I’m a passionate software engineer specializing in crafting efficient and scalable solutions, with a strong focus on the MERN Stack and frequent experience in iOS development. I excel at delivering top-notch web applications and innovative iOS apps, driven by a commitment to exceeding client expectations.<br />My journey into technology began in high school, igniting a deep enthusiasm for web development and iOS app creation. I am excited to delve further into AI/ML, competitive programming, and enhancing my understanding of data structures and algorithms.\nAlways eager to tackle complex problems and undertake creative projects, I am open to new challenges and opportunities to collaborate.",
 };
 
 const ProjectInfo = [
@@ -77,7 +68,14 @@ const ProjectInfo = [
     desc: "Travel Tracker is a full-stack web application that allows users to track their travel experiences and share them with others. The front end is built with React, Bootstrap, while the back end uses Node.js, Express, and PostgresSQL. Users can create an account, log in, add new trips, and view their past trips on a map. The app features a clean, modern design with interactive maps and a user-friendly interface. Travel Tracker combines functionality with style, making it easy and enjoyable to record and share travel memories.",
     image: "Travel.png",
     live: false,
-    technologies: ["Llama 3.1", "LangChain", "ChromaDB", "Streamlit", "Groq", "Python"],
+    technologies: [
+      "Llama 3.1",
+      "LangChain",
+      "ChromaDB",
+      "Streamlit",
+      "Groq",
+      "Python",
+    ],
     link: "https://github.com/Code-Mars/Travel-Tracker",
     github: "https://github.com/Code-Mars/Travel-Tracker",
   },
@@ -157,8 +155,15 @@ const SkillInfo = [
     ],
   },
   {
-    title: "Area of Interest",
-    skills: ["Full Stack Web Development", "AI/ML Engineer", "Front-End Development", "Data Scientist"],
+    title: "Areas of Interest",
+    skills: [
+      "Full Stack Web Development",
+      "Front-End Development",
+      "Back-End Development",
+      "Mobile Development",
+      "AI or ML Engineer",
+      "Data Scientist",
+    ],
   },
 ];
 const socialLinks = [
@@ -297,4 +302,12 @@ const Slugs = [
   "sonarqube",
   "figma",
 ];
-export { Info, ProjectInfo, socialLinks, SkillInfo, ExperienceInfo, EducationData, Slugs };
+export {
+  Info,
+  ProjectInfo,
+  socialLinks,
+  SkillInfo,
+  ExperienceInfo,
+  EducationData,
+  Slugs,
+};
